@@ -734,7 +734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -111.80078}
+  m_AnchoredPosition: {x: 0, y: -111.80066}
   m_SizeDelta: {x: 0, y: -111.8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &58213725
@@ -34282,7 +34282,7 @@ GameObject:
   - component: {fileID: 651764966}
   - component: {fileID: 651764969}
   m_Layer: 5
-  m_Name: Button_Reveiw
+  m_Name: Button_Portfolio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68453,7 +68453,7 @@ GameObject:
   - component: {fileID: 1675332462}
   - component: {fileID: 1675332465}
   m_Layer: 5
-  m_Name: Button_OtherGames
+  m_Name: Button_Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79096,7 +79096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -116.59961}
+  m_AnchoredPosition: {x: 0, y: -116.59949}
   m_SizeDelta: {x: 0, y: -116.6}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1782271885
@@ -81001,7 +81001,7 @@ GameObject:
   - component: {fileID: 1939176316}
   - component: {fileID: 1939176319}
   m_Layer: 5
-  m_Name: Button_Facebook
+  m_Name: Button_Instagram
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

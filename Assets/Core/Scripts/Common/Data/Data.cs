@@ -39,9 +39,9 @@ public class Data
 
 
 #if UNITY_ANDROID
-    public const string url_srccode = "";
+    public const string url_srccode = "https://github.com/C-Lex31/TheBalls";
 #elif UNITY_IOS || UNITY_EDITOR
-    public const string url_srccode = "";
+    public const string url_srccode = "https://github.com/C-Lex31/TheBalls";
 #endif
 
     public static string GetSystemLanguageLetter()

@@ -13,7 +13,7 @@ public class ButtonRocket : MonoBehaviour {
 #if UNITY_EDITOR
     float reloadMaxCount = 2;
 #else
-    float reloadMaxCount = 25;
+    float reloadMaxCount = 12;
 #endif
 
     public Image rocketFiilAmount;

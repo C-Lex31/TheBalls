@@ -14,7 +14,7 @@ public class ADManager : Singleton<ADManager>, IUnityAdsInitializationListener
     void Start()
     {
        // Advertisement.AddListener(this);
-        Advertisement.Initialize(gameId, testMode);
+        Advertisement.Initialize(gameId, testMode, this);
      //   Advertisement.Initialize(this);
     }
 

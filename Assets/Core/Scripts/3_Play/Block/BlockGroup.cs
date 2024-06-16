@@ -355,6 +355,7 @@ public class BlockGroup : MonoBehaviour
             CtrGame.instance.GameOver();
         }
 
+
         blockBases.Clear();
         CtrBlock.instance.blockGroups.Remove(this);
         PoolManager.Despawn(this.gameObject);
