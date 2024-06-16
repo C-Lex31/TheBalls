@@ -8,7 +8,7 @@ public class CtrSplash : CtrBase {
     public Image imageSplash;
 
     void Awake () {
-        imageSplash.DOFade(0f, 0f);
+        imageSplash.DOFade(0f,0f);
     }
 
 
@@ -20,11 +20,12 @@ public class CtrSplash : CtrBase {
 
     IEnumerator StartCo () {
         
-        imageSplash.DOFade(1, 0.25f).SetEase(Ease.OutCubic);
+        yield return new WaitForSeconds(1.0f);
+        imageSplash.DOFade(1, 0.3f).SetEase(Ease.Linear);
         yield return new WaitForSeconds(2.0f);
 
-        imageSplash.DOFade(0, 0.2f).SetEase(Ease.InCubic);
-        yield return new WaitForSeconds(0.2f);
+        imageSplash.DOFade(0, 0.2f).SetEase(Ease.Linear);
+        yield return new WaitForSeconds(0.25f);
         PlayManager.Instance.isFade = true;
 
         //Waiting for Update Check
@@ -37,7 +38,7 @@ public class CtrSplash : CtrBase {
         bool isCheckUpdate = true;
 
         while (isCheckUpdate) {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             isCheckUpdate = false;
         }
     }
