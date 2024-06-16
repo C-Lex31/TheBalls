@@ -46,7 +46,7 @@ public class CtrResult : MonoBehaviour
         textTurn.text = string.Format("Turn {0}", PlayManager.Instance.turn);
 
 
-        textBestScore.text = Utility.ChangeThousandsSeparator(bestScore);
+       textBestScore.text = Utility.ChangeThousandsSeparator(bestScore);
 
 
     }
@@ -113,6 +113,7 @@ public class CtrResult : MonoBehaviour
             //PlayerPrefs saves highscores
             GameData.BestScore = score;
             GameData.BestTurn = turn;
+            textBestScore.text = Utility.ChangeThousandsSeparator(score);
         }
 
         SoundManager.Instance.StopEffectLoop();
@@ -120,7 +121,7 @@ public class CtrResult : MonoBehaviour
         //Show ads
         SetADs();
 
-        textBestScore.text = Utility.ChangeThousandsSeparator(score);
+      //  textBestScore.text = Utility.ChangeThousandsSeparator(score);
 
         if (PlayManager.Instance.countBreakeBrick > 0)
         {
@@ -329,6 +330,7 @@ public class CtrResult : MonoBehaviour
         PlayManager.Instance.IsTouch = false;
         SoundManager.Instance.PlayEffect(SoundList.sound_common_btn_in);
         PlayManager.Instance.LoadScene(Data.scene_play);
+         SoundManager.Instance.PlayEffect(SoundList.sound_play_sfx_in);
     }
 
 #if UNITY_ANDROID

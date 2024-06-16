@@ -58,7 +58,11 @@ public void UIReset () {
 
     public void Click_Home () {
         SoundManager.Instance.PlayEffect(SoundList.sound_common_btn_in);
-        PlayManager.Instance.LoadScene(Data.scene_home);
+        //PlayManager.Instance.LoadScene(Data.scene_home);
+        PlayManager.Instance.turn = CtrGame.instance.turnCount;
+        SoundManager.Instance.StopBGM();
+        PlayManager.Instance.LoadScene(Data.scene_result);
+         //CtrGame.instance.GameOver();
     }
 
     public void Click_Again () {
@@ -89,8 +93,8 @@ public void UIReset () {
 
     public void Click_Music_Left_Arrow () {
         GameData.BgmCount -= 1;
-
-        if (GameData.BgmCount <= 0) {
+        Debug.Log(GameData.BgmCount);
+        if (GameData.BgmCount < 0) {
             GameData.BgmCount = 9;
         }
 
@@ -100,8 +104,8 @@ public void UIReset () {
 
     public void Click_Music_Right_Arrow () {
         GameData.BgmCount += 1;
-
-        if (GameData.BgmCount >= 9) {
+        Debug.Log(GameData.BgmCount);
+        if (GameData.BgmCount > 9) {
             GameData.BgmCount = 0;
         }
 

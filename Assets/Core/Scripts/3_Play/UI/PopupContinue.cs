@@ -53,7 +53,7 @@ public class PopupContinue : MonoBehaviour
     {
         int score = 0;
         int targetScore = PlayManager.Instance.score;
-
+        textBest.text= Utility.ChangeThousandsSeparator(GameData.BestScore);
         float time = 0.5f;
         DOTween.To(() => score, x => score = x, targetScore, time).SetEase(Ease.Linear);
 
@@ -68,7 +68,7 @@ public class PopupContinue : MonoBehaviour
 
         SoundManager.Instance.StopEffectLoop();
         textScore.text = Utility.ChangeThousandsSeparator(targetScore);
-
+        
         yield return new WaitForSeconds(1f);
 
         btnNoThanks.transform.DOScale(1f, 0.25f).SetEase(Ease.OutCubic);
@@ -108,5 +108,6 @@ public class PopupContinue : MonoBehaviour
     public void Click_NoThanks()
     {
         PlayManager.Instance.LoadScene(Data.scene_result);
+        SoundManager.Instance.StopBGM();
     }
 }

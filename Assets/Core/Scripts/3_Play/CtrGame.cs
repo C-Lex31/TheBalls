@@ -98,7 +98,6 @@ public class CtrGame : CtrBase
     {
         PlayManager.Instance.commonUI._CoinGem.Hide();
         SoundManager.Instance.PlayBGM(SoundList.sound_play_bgm);
-
         Player.instance.SetData();
         yield return new WaitForSeconds(0.01f);
         CtrBlock.instance.SpwanBlock(0, turnCount);

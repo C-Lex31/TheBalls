@@ -77,6 +77,7 @@ public class SoundManager : Singleton<SoundManager>
 			activeBGM.loop = isLoop;
 			activeBGM.volume = 1f;
 			activeBGM.clip = Resources.Load(string.Format("{0}{1}", Data.path_sound, music)) as AudioClip;
+			//
 			activeBGM.Play();
 		}
 	}
@@ -118,8 +119,9 @@ public class SoundManager : Singleton<SoundManager>
 			() =>
 			{
 				activeBGM.Stop();
-				Destroy(activeBGM.gameObject);
-				activeBGM = null;
+				//Destroy(activeBGM.gameObject);
+				//activeBGM = null;
+				activeBGM.clip=null;
 			}).SetUpdate(true);
 	}
 
