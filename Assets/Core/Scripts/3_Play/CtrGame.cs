@@ -27,7 +27,7 @@ public class CtrGame : CtrBase
     [HideInInspector] public int comboCount = 0;
     [HideInInspector] public bool isAllClear = false;
     [SerializeField] private AudioSource audio;
-    [SerializeField] private AudioClip clip;
+     private AudioClip clip;
     public TiltCamera tiltCamera;
     public ButtonRocket buttonRocket;
     private int shotSoundCount = 0;
@@ -188,11 +188,13 @@ public class CtrGame : CtrBase
     }
 
 
-    public void ShotSound()
+    public void ShotSound(bool bHitBlock=false)
     {
-        if (shotSoundCount > 2) return;
+        if (shotSoundCount > 4) return;
         shotSoundCount++;
         audio.volume = Data.VolumeEffect;
+        clip = Resources.Load(string.Format("{0}{1}", Data.path_sound, bHitBlock?SoundList.sound_play_sfx_hit_block:SoundList.sound_play_sfx_ball)) as AudioClip ;
+       // SoundManager.Instance.PlayEffect(SoundList.sound_play_sfx_ball);
         audio.PlayOneShot(clip);
 
         StartCoroutine(RemoveSoundCo(clip.length));

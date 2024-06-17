@@ -35,7 +35,7 @@ public class AudioBar : MonoBehaviour, IDragHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        SoundManager.Instance.PlayEffect(SoundList.sound_common_btn_in);
+        //SoundManager.Instance.PlayEffect(SoundList.sound_common_btn_in);
     }
 
     public void OnDrag(PointerEventData eventData)

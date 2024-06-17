@@ -14,7 +14,7 @@ public class ComboEffect : MonoBehaviour
         imageCombo.sprite = s;
         imageCombo_overay.sprite = s;
 
-        if (count == 10)
+        if (count == 5)
         {
             //Lucky bonus when combo is 10
             CtrUI.instance.LuckyBonus();

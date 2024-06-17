@@ -13,7 +13,7 @@ public class ButtonRocket : MonoBehaviour {
 #if UNITY_EDITOR
     float reloadMaxCount = 2;
 #else
-    float reloadMaxCount = 12;
+    float reloadMaxCount = 10;
 #endif
 
     public Image rocketFiilAmount;
@@ -92,6 +92,8 @@ public class ButtonRocket : MonoBehaviour {
     public GameObject buttonClose;
 
     public void Cancel () {
+         Player.instance.gameObject.SetActive(true);
+         CtrUI.instance.textBallCount.gameObject.SetActive(true);
         //Turn off the rocket launcher panel
         rocketArea.SetActive(false);
 

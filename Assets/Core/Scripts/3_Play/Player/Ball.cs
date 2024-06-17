@@ -29,7 +29,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        CtrGame.instance.ShotSound();
+        CtrGame.instance.ShotSound(collision.gameObject.CompareTag("Block"));
         //SoundManager.Instance.PlayEffect(Sound.sound_play_sfx_ball);
         _isDestoryOn = true;
     }
@@ -57,6 +57,7 @@ public class Ball : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+
         if (_isDestoryOn)
         {
             if (collision.CompareTag("InTrigger"))

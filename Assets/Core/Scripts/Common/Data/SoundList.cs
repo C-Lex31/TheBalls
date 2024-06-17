@@ -27,8 +27,11 @@ public class SoundList {
 
     public static string sound_play_sfx_in = "sound_play_sfx_in";
 
-    //Play: When the ball hits the brick
+    //Play: When the ball hits anything
     public static string sound_play_sfx_ball = "sound_play_sfx_ball";
+
+
+
     //Play: When the ball fires
     public static string sound_play_sfx_ball_launch = "sound_play_sfx_ball_launch";
     //Play: When you get the ball
@@ -75,7 +78,13 @@ public class SoundList {
     public static string sound_play_sfx_block_destroy_big = "sound_play_sfx_block_destroy_big";
 
 
-
+    //Play: When the ball hits block
+    public static string sound_play_sfx_hit_block {
+        get{
+            string name = "sound_play_sfx_hit_block"+Random.Range(0,6);
+            return name;
+        }
+    }
 
     //Play: When the block is destroyed 1
     public static string sound_play_sfx_block1_destory {
